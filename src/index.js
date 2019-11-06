@@ -10,30 +10,14 @@ export const sayHello = () => {
 };
 
 // Brain-even game
-const firstNumber = 16;
-const secondNumber = 23;
-const thirdNumber = 46;
-
-const getCurrentNumber = (round) => {
-  if (round === 1) {
-    return firstNumber;
-  }
-  if (round === 2) {
-    return secondNumber;
-  }
-  if (round === 3) {
-    return thirdNumber;
-  }
-  return null;
-};
-
-const correctAnswer = (currentNumber) => (currentNumber % 2 === 0 ? 'yes' : 'no');
+const generateRandomNumber = () => Math.floor(Math.random() * 100 + 1);
+const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 export const askQuestion = (round) => {
   if (round > 3) {
     return console.log(`Congratulations, ${userName}!`);
   }
-  const currentNumber = getCurrentNumber(round);
+  const currentNumber = generateRandomNumber();
   console.log(`Question: ${currentNumber}`);
   const userAnswer = readlineSync.question('Your answer: ');
   if (correctAnswer(currentNumber) === userAnswer) {
