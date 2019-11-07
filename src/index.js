@@ -25,5 +25,5 @@ const makeGame = (rule, gameValues) => {
   return askQuestion(1);
 };
 
-export const generateRandomNumber = () => Math.floor(Math.random() * 100 + 1);
+export const generateRandomNumber = (max) => Math.floor(Math.random() * max + 1);
 export default makeGame;
