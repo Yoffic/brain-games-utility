@@ -1,9 +1,4 @@
 #!/usr/bin/env node
-import {
-  welcome, instructIsEven, sayHello, askQuestion,
-} from '..';
+import evenGame from '../games/even';
 
-welcome();
-instructIsEven();
-sayHello();
-askQuestion(1);
+evenGame();
