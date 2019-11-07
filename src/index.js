@@ -11,7 +11,7 @@ const makeGame = (rule, gameValues) => {
     if (round > 3) {
       return console.log(`Congratulations, ${userName}!`);
     }
-    const currentGameValues = gameValues(round);
+    const currentGameValues = gameValues();
     const questionValue = car(currentGameValues);
     const correctAnswer = cdr(currentGameValues);
     console.log(`Question: ${questionValue}`);
