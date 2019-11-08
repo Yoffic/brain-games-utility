@@ -12,8 +12,20 @@ After that you can install **brain-games** locally using  ```npm link```  in the
 
 To start first game run command
 
-```brain-even```   
+```sh
+brain-even
+```   
 
 This is how the game looks like
 
 [![asciicast](https://asciinema.org/a/buWy8nZVrGWwJnFvyA6cNOFKV.svg)](https://asciinema.org/a/buWy8nZVrGWwJnFvyA6cNOFKV?speed=2&autoplay=1&loop=1)
+
+To start second game run command
+
+```sh
+brain-calc
+```   
+
+This is how the game looks like
+
+[![asciicast](https://asciinema.org/a/U2u955DQzbEZDuQmEHsGSgmXV.svg)](https://asciinema.org/a/U2u955DQzbEZDuQmEHsGSgmXV)
