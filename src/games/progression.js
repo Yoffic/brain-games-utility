@@ -6,19 +6,17 @@ const createProgression = () => {
   const positionOfHiddenNumber = generateRandomNumber(10);
   let progressionNumber = generateRandomNumber(100);
   let progression = `${progressionNumber}`;
-  let correctAnswer = '';
   if (positionOfHiddenNumber === 1) {
     progression = '..';
-    correctAnswer = progressionNumber.toString();
   } else {
     for (let i = 1; i < positionOfHiddenNumber - 1; i += 1) {
       progressionNumber += 2;
       progression = `${progression} ${progressionNumber}`;
-      correctAnswer = (progressionNumber + 2).toString();
     }
     progression = `${progression} ..`;
     progressionNumber += 2;
   }
+  const correctAnswer = progressionNumber.toString();
   for (let i = positionOfHiddenNumber; i < 10; i += 1) {
     progressionNumber += 2;
     progression = `${progression} ${progressionNumber}`;
