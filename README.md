@@ -1,7 +1,7 @@
 # Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage) [![Build Status](https://travis-ci.com/Yoffic/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Yoffic/frontend-project-lvl1)
 
-This project consist of 4 games.
+This project consist of 5 games.
 
 First, you need to install npm. Run `make install` in the project directory.  
 Then generate build of the package running command `make publish`.  
@@ -53,3 +53,13 @@ brain-progression
 This is how the forth game looks like
 
 [![asciicast](https://asciinema.org/a/ncHvK0HltcOKBT8RtVU8loNQS.svg)](https://asciinema.org/a/ncHvK0HltcOKBT8RtVU8loNQS?autoplay=1&loop=1)
+
+
+To start **fifth game** run command
+
+```sh
+brain-prime
+```   
+
+This is how the fifth game looks like
+[![asciicast](https://asciinema.org/a/9KZpKIbPwEKelJspYXVi2ZhpO.svg)](https://asciinema.org/a/9KZpKIbPwEKelJspYXVi2ZhpO?autoplay=1&loop=1)
