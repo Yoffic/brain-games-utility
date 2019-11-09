@@ -2,26 +2,33 @@ import { cons } from '@hexlet/pairs';
 import makeGame, { generateRandomNumber } from '../index';
 
 const rule = 'What number is missing in the progression?\n';
-const createProgression = () => {
-  const positionOfHiddenNumber = generateRandomNumber(10);
+let hiddenNumber = 0;
+const createProgression = (hiddenPosition) => {
   let currentProgressionNumber = generateRandomNumber(100);
   let progression = `${currentProgressionNumber}`;
-  if (positionOfHiddenNumber === 1) {
+  if (hiddenPosition === 1) {
     progression = '..';
   } else {
-    for (let i = 1; i < positionOfHiddenNumber - 1; i += 1) {
+    for (let i = 1; i < hiddenPosition - 1; i += 1) {
       currentProgressionNumber += 2;
       progression = `${progression} ${currentProgressionNumber}`;
     }
     progression = `${progression} ..`;
     currentProgressionNumber += 2;
   }
-  const correctAnswer = currentProgressionNumber.toString();
-  for (let i = positionOfHiddenNumber; i < 10; i += 1) {
+  hiddenNumber = currentProgressionNumber;
+  for (let i = hiddenPosition; i < 10; i += 1) {
     currentProgressionNumber += 2;
     progression = `${progression} ${currentProgressionNumber}`;
   }
-  return cons(progression, correctAnswer);
+  return progression;
 };
 
-export default () => makeGame(rule, createProgression);
+const createGameValues = () => {
+  const positionOfHiddenNumber = generateRandomNumber(10);
+  const gameValues = createProgression(positionOfHiddenNumber);
+  const correctAnswer = hiddenNumber.toString();
+  return cons(gameValues, correctAnswer);
+};
+
+export default () => makeGame(rule, createGameValues);
