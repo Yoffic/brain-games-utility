@@ -4,7 +4,7 @@ import makeGame, { generateRandomNumber } from '../index';
 const rule = 'What is the result of the expression?\n';
 const operands = '+-*';
 const generateRandomOperand = () => {
-  const index = Math.floor(Math.random() * 3);
+  const index = Math.floor(Math.random() * operands.length);
   return operands[index];
 };
 const makeCalc = (number1, number2, operand) => {
