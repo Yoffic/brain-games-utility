@@ -19,7 +19,7 @@ brain-even
 
 This is how the game looks like
 
-[![asciicast](https://asciinema.org/a/buWy8nZVrGWwJnFvyA6cNOFKV.svg)](https://asciinema.org/a/buWy8nZVrGWwJnFvyA6cNOFKV?autoplay=1&loop=1)
+[![asciicast](https://asciinema.org/a/iGTxgasSOD6JTjnbl079Bcpax.svg)](https://asciinema.org/a/iGTxgasSOD6JTjnbl079Bcpax?autoplay=1&loop=1)
 
 
 To start **second game** run command
@@ -30,7 +30,7 @@ brain-calc
 
 This is how the game looks like
 
-[![asciicast](https://asciinema.org/a/U2u955DQzbEZDuQmEHsGSgmXV.svg)](https://asciinema.org/a/U2u955DQzbEZDuQmEHsGSgmXV?autoplay=1&loop=1)
+[![asciicast](https://asciinema.org/a/uFYntfIRnKKJaHeLsKwAAQBtK.svg)](https://asciinema.org/a/uFYntfIRnKKJaHeLsKwAAQBtK?autoplay=1&loop=1)
 
 
 To start **third game** run command
@@ -41,7 +41,7 @@ brain-gcd
 
 This is how the third game looks like
 
-[![asciicast](https://asciinema.org/a/D8aEQe7DxKCJi4OPGo21L98e8.svg)](https://asciinema.org/a/D8aEQe7DxKCJi4OPGo21L98e8?autoplay=1&loop=1)
+[![asciicast](https://asciinema.org/a/Ntc8pKdaw4pODa3JTSOtnTscX.svg)](https://asciinema.org/a/Ntc8pKdaw4pODa3JTSOtnTscX?autoplay=1&loop=1)
 
 
 To start **forth game** run command
@@ -52,7 +52,7 @@ brain-progression
 
 This is how the forth game looks like
 
-[![asciicast](https://asciinema.org/a/ncHvK0HltcOKBT8RtVU8loNQS.svg)](https://asciinema.org/a/ncHvK0HltcOKBT8RtVU8loNQS?autoplay=1&loop=1)
+[![asciicast](https://asciinema.org/a/pyFN8hUGolS94NWMjeOJRxV7G.svg)](https://asciinema.org/a/pyFN8hUGolS94NWMjeOJRxV7G?autoplay=1&loop=1)
 
 
 To start **fifth game** run command
@@ -62,4 +62,4 @@ brain-prime
 ```   
 
 This is how the fifth game looks like
-[![asciicast](https://asciinema.org/a/9KZpKIbPwEKelJspYXVi2ZhpO.svg)](https://asciinema.org/a/9KZpKIbPwEKelJspYXVi2ZhpO?autoplay=1&loop=1)
+[![asciicast](https://asciinema.org/a/gavXr7WxJG7QBLtLidBwKjMsJ.svg)](https://asciinema.org/a/gavXr7WxJG7QBLtLidBwKjMsJ?autoplay=1&loop=1)
