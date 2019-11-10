@@ -1,7 +1,7 @@
 {
   "name": "brain-games",
   "version": "0.1.5",
-  "description": "Brain Games",
+  "description": "Brain Games consist of 5 simple math console games",
   "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -16,14 +16,19 @@
   ],
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yoffic/frontend-project-lvl1.git"
   },
-  "author": "Olga Ioffe",
+  "keywords": [
+    "games",
+    "brain",
+    "console",
+    "math"
+  ],
+  "author": "Olga Ioffe <yoffic@yahoo.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Yoffic/frontend-project-lvl1/issues"
