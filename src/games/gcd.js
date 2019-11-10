@@ -17,8 +17,8 @@ const createGameValues = () => {
   const number1 = generateRandomNumber(100);
   const number2 = generateRandomNumber(100);
   const currentValue = `${number1} ${number2}`;
-  const correctAnswer = getGreatestCommonDividor(number1, number2);
-  return cons(currentValue, correctAnswer.toString());
+  const correctAnswer = getGreatestCommonDividor(number1, number2).toString();
+  return cons(currentValue, correctAnswer);
 };
 
 export default () => makeGame(rule, createGameValues);

@@ -26,9 +26,9 @@ const createProgression = (hiddenPosition) => {
 
 const createGameValues = () => {
   const positionOfHiddenNumber = generateRandomNumber(10);
-  const gameValues = createProgression(positionOfHiddenNumber);
+  const currentValue = createProgression(positionOfHiddenNumber);
   const correctAnswer = hiddenNumber.toString();
-  return cons(gameValues, correctAnswer);
+  return cons(currentValue, correctAnswer);
 };
 
 export default () => makeGame(rule, createGameValues);

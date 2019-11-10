@@ -21,8 +21,8 @@ const createGameValues = () => {
   const number2 = generateRandomNumber(10);
   const operand = generateRandomOperand();
   const currentValue = `${number1} ${operand} ${number2}`;
-  const correctAnswer = makeCalc(number1, number2, operand);
-  return cons(currentValue, correctAnswer.toString());
+  const correctAnswer = makeCalc(number1, number2, operand).toString();
+  return cons(currentValue, correctAnswer);
 };
 
 export default () => makeGame(rule, createGameValues);
