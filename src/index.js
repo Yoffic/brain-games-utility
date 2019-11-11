@@ -7,7 +7,7 @@ export const sayHello = () => {
   userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 };
-export const generateRandomNumber = (max) => Math.floor(Math.random() * max + 1);
+export const generateRandomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));
 
 const makeGame = (rule, gameValues) => {
   welcome();
