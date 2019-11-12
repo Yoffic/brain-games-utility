@@ -1,18 +1,13 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-export const welcome = () => console.log('Welcome to the Brain Games!');
-let userName = '';
-export const sayHello = () => {
-  userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
-};
 export const generateRandomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));
 
 const makeGame = (rule, gameValues) => {
-  welcome();
-  console.log(rule);
-  sayHello();
+  console.log('Welcome to the Brain Games!');
+  console.log(`${rule}\n`);
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
   const askQuestion = (round) => {
     if (round > 3) {
       return console.log(`Congratulations, ${userName}!`);
