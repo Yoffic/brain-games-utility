@@ -1,24 +1,24 @@
 import { cons } from '@hexlet/pairs';
 import makeGame, { generateRandomNumber } from '../index';
 
-const rule = 'Find the greatest common divisor of given numbers.\n';
-const getGreatestCommonDividor = (firstNumber, secondNumber) => {
-  let divider = firstNumber;
-  if (firstNumber > secondNumber) {
-    divider = secondNumber;
-  }
+const rule = 'Find the greatest common divisor of given numbers.';
+const getGreatestCommonDivider = (value1, value2) => {
   let result = 0;
+  let divider = value1;
+  if (value1 > value2) {
+    divider = value2;
+  }
   for (let i = 1; i <= divider; i += 1) {
-    result = firstNumber % i === 0 && secondNumber % i === 0 ? i : result;
+    result = value1 % i === 0 && value2 % i === 0 ? i : result;
   }
   return result;
 };
 const createGameValues = () => {
-  const number1 = generateRandomNumber(100);
-  const number2 = generateRandomNumber(100);
-  const currentValue = `${number1} ${number2}`;
-  const correctAnswer = getGreatestCommonDividor(number1, number2).toString();
-  return cons(currentValue, correctAnswer);
+  const number1 = generateRandomNumber(1, 100);
+  const number2 = generateRandomNumber(1, 100);
+  const gameQuestion = `${number1} ${number2}`;
+  const correctAnswer = getGreatestCommonDivider(number1, number2).toString();
+  return cons(gameQuestion, correctAnswer);
 };
 
 export default () => makeGame(rule, createGameValues);
