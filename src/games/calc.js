@@ -1,24 +1,19 @@
 import { cons } from '@hexlet/pairs';
 import makeGame, { generateRandomNumber } from '../index';
 
-const rule = 'What is the result of the expression?\n';
+const rule = 'What is the result of the expression?';
 const operands = '+-*';
 const makeCalc = (number1, number2, operand) => {
-  let result = '';
   switch (operand) {
     case '+':
-      result = `${number1 + number2}`;
-      break;
+      return number1 + number2;
     case '-':
-      result = `${number1 - number2}`;
-      break;
+      return number1 - number2;
     case '*':
-      result = `${number1 * number2}`;
-      break;
+      return number1 * number2;
     default:
       return null;
   }
-  return result;
 };
 const createGameValues = () => {
   const number1 = generateRandomNumber(1, 25);
@@ -26,7 +21,7 @@ const createGameValues = () => {
   const operandIndex = generateRandomNumber(0, operands.length - 1);
   const operand = operands[operandIndex];
   const gameQuestion = `${number1} ${operand} ${number2}`;
-  const correctAnswer = makeCalc(number1, number2, operand);
+  const correctAnswer = makeCalc(number1, number2, operand).toString();
   return cons(gameQuestion, correctAnswer);
 };
 
