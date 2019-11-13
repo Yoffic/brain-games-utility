@@ -3,7 +3,7 @@ import makeGame, { generateRandomNumber } from '../index';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (value) => {
-  if (value % 2 === 0) {
+  if (value % 2 === 0 || value < 2) {
     return false;
   }
   let divider = 1;
