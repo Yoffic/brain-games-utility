@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import makeGame, { generateRandomNumber } from '../index';
+import generateRandomNumber from '../utils';
+import makeGame from '..';
 
 const rule = 'What is the result of the expression?';
 const operands = '+-*';
