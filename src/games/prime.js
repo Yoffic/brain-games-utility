@@ -14,10 +14,10 @@ const isPrime = (value) => {
   }
   return divider === 1;
 };
-const createGameValues = () => {
+const makeRound = () => {
   const gameQuestion = generateRandomNumber(1, 1000);
   const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
   return cons(gameQuestion, correctAnswer);
 };
 
-export default () => makeGame(rule, createGameValues);
+export default () => makeGame(rule, makeRound);

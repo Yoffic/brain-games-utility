@@ -14,7 +14,7 @@ const getGreatestCommonDivider = (firstValue, secondValue) => {
   }
   return result;
 };
-const createGameValues = () => {
+const makeRound = () => {
   const firstValue = generateRandomNumber(1, 100);
   const secondValue = generateRandomNumber(1, 100);
   const gameQuestion = `${firstValue} ${secondValue}`;
@@ -22,4 +22,4 @@ const createGameValues = () => {
   return cons(gameQuestion, correctAnswer);
 };
 
-export default () => makeGame(rule, createGameValues);
+export default () => makeGame(rule, makeRound);

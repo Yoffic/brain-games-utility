@@ -3,9 +3,9 @@ import generateRandomNumber from '../utils';
 import makeGame from '..';
 
 const rule = 'What is the result of the expression?';
-const operands = '+-*';
-const makeCalc = (firstValue, secondValue, operand) => {
-  switch (operand) {
+const operators = '+-*';
+const makeCalc = (firstValue, secondValue, operator) => {
+  switch (operator) {
     case '+':
       return firstValue + secondValue;
     case '-':
@@ -16,14 +16,13 @@ const makeCalc = (firstValue, secondValue, operand) => {
       return null;
   }
 };
-const createGameValues = () => {
+const makeRound = () => {
   const firstValue = generateRandomNumber(1, 25);
   const secondValue = generateRandomNumber(1, 10);
-  const operandIndex = generateRandomNumber(0, operands.length - 1);
-  const operand = operands[operandIndex];
-  const gameQuestion = `${firstValue} ${operand} ${secondValue}`;
-  const correctAnswer = makeCalc(firstValue, secondValue, operand).toString();
+  const operator = operators[generateRandomNumber(0, operators.length - 1)];
+  const gameQuestion = `${firstValue} ${operator} ${secondValue}`;
+  const correctAnswer = makeCalc(firstValue, secondValue, operator).toString();
   return cons(gameQuestion, correctAnswer);
 };
 
-export default () => makeGame(rule, createGameValues);
+export default () => makeGame(rule, makeRound);
