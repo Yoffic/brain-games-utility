@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Brain Games consist of 5 simple math console games",
   "main": "",
   "bin": {
