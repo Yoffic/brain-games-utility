@@ -3,23 +3,20 @@ import generateRandomNumber from '../utils';
 import makeGame from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
-const getGreatestCommonDivider = (firstValue, secondValue) => {
+const getGreatestCommonDivider = (value1, value2) => {
   let result = 0;
-  let divider = firstValue;
-  if (firstValue > secondValue) {
-    divider = secondValue;
-  }
+  const divider = value1 > value2 ? value2 : value1;
   for (let i = 1; i <= divider; i += 1) {
-    result = firstValue % i === 0 && secondValue % i === 0 ? i : result;
+    result = value1 % i === 0 && value2 % i === 0 ? i : result;
   }
   return result;
 };
 const makeRound = () => {
-  const firstValue = generateRandomNumber(1, 100);
-  const secondValue = generateRandomNumber(1, 100);
-  const gameQuestion = `${firstValue} ${secondValue}`;
-  const correctAnswer = getGreatestCommonDivider(firstValue, secondValue).toString();
-  return cons(gameQuestion, correctAnswer);
+  const value1 = generateRandomNumber(1, 100);
+  const value2 = generateRandomNumber(1, 100);
+  const question = `${value1} ${value2}`;
+  const correctAnswer = getGreatestCommonDivider(value1, value2).toString();
+  return cons(question, correctAnswer);
 };
 
 export default () => makeGame(rule, makeRound);

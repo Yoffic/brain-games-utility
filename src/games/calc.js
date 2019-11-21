@@ -4,25 +4,25 @@ import makeGame from '..';
 
 const rule = 'What is the result of the expression?';
 const operators = '+-*';
-const makeCalc = (firstValue, secondValue, operator) => {
+const makeCalc = (value1, value2, operator) => {
   switch (operator) {
     case '+':
-      return firstValue + secondValue;
+      return value1 + value2;
     case '-':
-      return firstValue - secondValue;
+      return value1 - value2;
     case '*':
-      return firstValue * secondValue;
+      return value1 * value2;
     default:
       return null;
   }
 };
 const makeRound = () => {
-  const firstValue = generateRandomNumber(1, 25);
-  const secondValue = generateRandomNumber(1, 10);
+  const value1 = generateRandomNumber(1, 25);
+  const value2 = generateRandomNumber(1, 10);
   const operator = operators[generateRandomNumber(0, operators.length - 1)];
-  const gameQuestion = `${firstValue} ${operator} ${secondValue}`;
-  const correctAnswer = makeCalc(firstValue, secondValue, operator).toString();
-  return cons(gameQuestion, correctAnswer);
+  const question = `${value1} ${operator} ${value2}`;
+  const correctAnswer = makeCalc(value1, value2, operator).toString();
+  return cons(question, correctAnswer);
 };
 
 export default () => makeGame(rule, makeRound);

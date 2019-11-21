@@ -15,9 +15,9 @@ const isPrime = (value) => {
   return divider === 1;
 };
 const makeRound = () => {
-  const gameQuestion = generateRandomNumber(1, 1000);
-  const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
-  return cons(gameQuestion, correctAnswer);
+  const question = generateRandomNumber(1, 1000);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
 
 export default () => makeGame(rule, makeRound);

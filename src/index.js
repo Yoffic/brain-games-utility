@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
 const roundsCount = 3;
-const makeGame = (rule, getGameValues) => {
+const makeGame = (rule, getGameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${rule}\n`);
   const userName = readlineSync.question('May I have your name? ');
@@ -12,9 +12,9 @@ const makeGame = (rule, getGameValues) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const currentGameValues = getGameValues();
-    const question = car(currentGameValues);
-    const correctAnswer = cdr(currentGameValues);
+    const currentGameData = getGameData();
+    const question = car(currentGameData);
+    const correctAnswer = cdr(currentGameData);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
@@ -25,7 +25,7 @@ const makeGame = (rule, getGameValues) => {
     console.log('Correct!');
     makeGameRound(round + 1);
   };
-  return makeGameRound(1);
+  makeGameRound(1);
 };
 
 export default makeGame;
