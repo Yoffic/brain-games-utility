@@ -1,5 +1,5 @@
 # Brain Games
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Build Status](https://travis-ci.com/Yoffic/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Yoffic/frontend-project-lvl1)
+[![Code Climate](https://codeclimate.com/github/Yoffic/frontend-project-lvl1)](https://codeclimate.com/github/Yoffic/frontend-project-lvl1) [![Build Status](https://travis-ci.com/Yoffic/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Yoffic/frontend-project-lvl1)
 
 This project consist of 5 games.
 
