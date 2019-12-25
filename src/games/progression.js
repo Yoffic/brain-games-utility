@@ -1,4 +1,3 @@
-import { cons } from '@hexlet/pairs';
 import generateRandomNumber from '../utils';
 import makeGame from '..';
 
@@ -19,7 +18,7 @@ const makeRound = () => {
   const step = generateRandomNumber(1, 30);
   const question = makeQuestion(start, step, progressLength, hiddenValueIndex);
   const correctAnswer = (start + step * hiddenValueIndex).toString();
-  return cons(question, correctAnswer);
+  return [question, correctAnswer];
 };
 
 export default () => makeGame(rule, makeRound);

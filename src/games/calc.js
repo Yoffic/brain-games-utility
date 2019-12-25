@@ -1,9 +1,8 @@
-import { cons } from '@hexlet/pairs';
 import generateRandomNumber from '../utils';
 import makeGame from '..';
 
 const rule = 'What is the result of the expression?';
-const operators = '+-*';
+const operators = ['+', '-', '*'];
 const makeCalc = (value1, value2, operator) => {
   switch (operator) {
     case '+':
@@ -22,7 +21,7 @@ const makeRound = () => {
   const operator = operators[generateRandomNumber(0, operators.length - 1)];
   const question = `${value1} ${operator} ${value2}`;
   const correctAnswer = makeCalc(value1, value2, operator).toString();
-  return cons(question, correctAnswer);
+  return [question, correctAnswer];
 };
 
 export default () => makeGame(rule, makeRound);

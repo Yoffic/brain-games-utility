@@ -1,4 +1,3 @@
-import { cons } from '@hexlet/pairs';
 import generateRandomNumber from '../utils';
 import makeGame from '..';
 
@@ -16,7 +15,7 @@ const makeRound = () => {
   const value2 = generateRandomNumber(1, 100);
   const question = `${value1} ${value2}`;
   const correctAnswer = getGreatestCommonDivider(value1, value2).toString();
-  return cons(question, correctAnswer);
+  return [question, correctAnswer];
 };
 
 export default () => makeGame(rule, makeRound);

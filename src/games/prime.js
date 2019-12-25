@@ -1,4 +1,3 @@
-import { cons } from '@hexlet/pairs';
 import generateRandomNumber from '../utils';
 import makeGame from '..';
 
@@ -17,7 +16,7 @@ const isPrime = (value) => {
 const makeRound = () => {
   const question = generateRandomNumber(1, 1000);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
-  return cons(question, correctAnswer);
+  return [question, correctAnswer];
 };
 
 export default () => makeGame(rule, makeRound);
