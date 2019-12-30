@@ -1,7 +1,7 @@
 # Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/afbdc3e1a1fc544272a2/maintainability)](https://codeclimate.com/github/Yoffic/frontend-project-lvl1/maintainability) [![Build Status](https://travis-ci.com/Yoffic/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Yoffic/frontend-project-lvl1)
 
-This project consist of 5 games.
+This project consist of 5 console games.
 
 First, you need to install npm. Run `make install` in the project directory.  
 Then generate build of the package running command `make publish`.  
