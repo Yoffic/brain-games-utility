@@ -10,7 +10,7 @@ const isPrime = (value) => {
 
   let divider = 1;
   const upperBorder = Math.sqrt(value);
-  
+
   for (let i = 3; i < upperBorder; i += 2) {
     divider = value % i === 0 ? i : divider;
   }
