@@ -3,14 +3,9 @@ import makeGame from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (value1, value2) => {
-  let result = 0;
-  const divider = value1 > value2 ? value2 : value1;
-  for (let i = 1; i <= divider; i += 1) {
-    result = value1 % i === 0 && value2 % i === 0 ? i : result;
-  }
-  return result;
-};
+const getGcd = (value1, value2) => (
+  (value1 % value2) ? getGcd(value2, value1 % value2) : Math.abs(value2)
+);
 
 const makeRound = () => {
   const value1 = generateRandomNumber(1, 100);
